@@ -29,7 +29,7 @@ I created a dir in my home dir just for storing cool tools like this.
 `mkdir ~/bin`  
 `cp target/release/backer ~/bin/`  
 Be sure to add that path to your shell configuration.  Ask your fave AI chatbot if you don't know how.  
-AFter you relaunch your shell, you should be set.
+After you relaunch your shell, you should be set.
 
 ## Use:
 My command prompt is in the root directory of my project.  
