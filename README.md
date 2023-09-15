@@ -35,25 +35,26 @@ AFter you relaunch your shell, you should be set.
 My command prompt is in the root directory of my project.  
 The file I want to quickly back up is src/main.rs.  
 Execute backer with path/filename as the argument.  
-  `backer src/main.rs` 
+`backer src/main.rs`   
 Backer will provide confirmation of saving your @ss:  
 `Backup path: .src/main.20230915:1517.backup`   
 
 Do that a few times, pausing a minute or two between commands.  
 Go look at the src dir after backing up your precious file a few times:  
-`ls -al src/` 
--rw-rw-r-- 1 rl rl 45 Sep 15 15:17 main.20230915:1517.backup  
--rw-rw-r-- 1 rl rl 45 Sep 15 15:19 main.20230915:1519.backup  
--rw-rw-r-- 1 rl rl 45 Sep 15 15:21 main.20230915:1521.backup  
--rw-rw-r-- 1 rl rl   45 Sep 15 15:03 main.rs  
-Your backups are naturally sorted.  
+`ls -al src/`   
+`-rw-rw-r-- 1 rl rl 45 Sep 15 15:17 main.20230915:1517.backup`  
+`-rw-rw-r-- 1 rl rl 45 Sep 15 15:19 main.20230915:1519.backup`  
+`-rw-rw-r-- 1 rl rl 45 Sep 15 15:21 main.20230915:1521.backup`  
+`-rw-rw-r-- 1 rl rl   45 Sep 15 15:03 main.rs`  
+Your backups are naturally sorted, making your life easy. 
+See how happy your are now that life just got easy?   
 
 # Edit your .gitignore to exclude adding backups to your repository:  
 `nano .gitignore`  
 Add the following line:  
 `*.backup`  
 
-You're welcome.  We've all been there, and done that.  
+You're welcome.  We've all done it.  
 Just get into the habit of using backer before unleashing your inner wrecking ball.  
 
 

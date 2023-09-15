@@ -1,0 +1,9 @@
+
+# directories
+__pycache__/
+target/
+.git/
+
+# files
+test.log
+
