@@ -5,5 +5,7 @@ target/
 .git/
 
 # files
-test.log
+test.*
+*.backup
+
 
