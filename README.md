@@ -5,7 +5,7 @@
 We already know what you did.  
 We know why you searched for backup tools.  
 That's why I made the tool.  I wrecked one-too-many important source files.  
-
+This tool was built for Linux users. Not made for Windows OS (but looking into it).  
 
 ### Installation
 If using the github tool:  `gh repo clone rlovell3/backer`  

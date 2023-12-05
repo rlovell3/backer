@@ -25,7 +25,7 @@ fn main() {
     }
 
     let current_datetime = chrono::Local::now();
-    let formatted_datetime = current_datetime.format("%Y%m%d:%H%M").to_string();
+    let formatted_datetime = current_datetime.format("%Y%m%d_%H%M").to_string();
     let backup_filename = format!("{}.{}.backup", file_path.file_stem().unwrap().to_str().unwrap(), formatted_datetime);
 
     let backup_path = file_path.with_file_name(&backup_filename);
