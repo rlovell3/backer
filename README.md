@@ -5,7 +5,7 @@
 We already know what you did.  
 We know why you searched for backup tools.  
 That's why I made the tool.  I wrecked one-too-many important source files.  
-This tool was built for Linux users. Not made for Windows OS (but looking into it).  
+This tool was built for Linux, but (now) also works on Windoze OS.  
 
 ### Installation
 If using the github tool:  `gh repo clone rlovell3/backer`  
@@ -49,7 +49,7 @@ Go look at the src dir after backing up your precious file a few times:
 Your backups are naturally sorted, making your life easy. 
 See how happy your are now that life just got easy?   
 
-# Edit your .gitignore to exclude adding backups to your repository:  
+## Edit your .gitignore to exclude adding backups to your repository:  
 `nano .gitignore`  
 Add the following line:  
 `*.backup`  
@@ -57,6 +57,7 @@ Add the following line:
 You're welcome.  We've all done it.  
 Just get into the habit of using backer before unleashing your inner wrecking ball.  
 
-
+## Build Notes
+2023-12-09 Code wasn't performing on Windows OS.  A search identified "a bug" in the Rust standard library's fs::copy function on Windows. The fix was to shift to std::io::copy.  
 
 
