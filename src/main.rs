@@ -27,16 +27,18 @@ fn main() {
     }
 
     let current_datetime = chrono::Local::now();
-    let formatted_datetime = current_datetime.format("%Y%m%d_%H%M").to_string();
-    let backup_filename = format!("{}.{}.backup", file_path.file_stem().unwrap().to_str().unwrap(), formatted_datetime);
-
-    /* let backup_path = file_path.with_file_name(&backup_filename);
-    println!("Backup path: {}", backup_path.display());
+    let formatted_datetime = current_datetime.format("%Y%m%d_%H%M-%S").to_string();
+    let extension = file_path.extension()
+        .and_then(|ext| ext.to_str())
+        .unwrap_or("");
+    //let backup_filename = format!("{}.{}.backup", file_path.file_stem().unwrap().to_str().unwrap(), formatted_datetime);
+    let backup_filename = format!(
+        "{}.{}.backup.{}",
+        file_path.file_stem().unwrap().to_str().unwrap(),
+        formatted_datetime,
+        extension
+    );
     
-    match fs::copy(&file_path, &backup_path) {
-        Ok(_) => println!("Backup successful: {}", backup_path.display()),
-        Err(e) => eprintln!("Error during backup: {}", e),
-    } */
 
     let backup_path = file_path.with_file_name(&backup_filename);
     println!("Backup path: {}", backup_path.display());
