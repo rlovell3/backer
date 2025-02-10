@@ -6,6 +6,6 @@ target/
 
 # files
 test.*
-*.backup
+*.backup.*
 
 

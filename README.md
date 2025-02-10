@@ -39,8 +39,10 @@ After you relaunch your shell, you should be set.
 ### Use
 
 `backer filename`  
+or  
+`backer /path/to/filename`  
 
-Include a path if you are not currently in the same directory.  
+Example:  
 `backer path/to/main.rs`  
 
 Backer will provide confirmation of saving your @ss:  
@@ -54,7 +56,7 @@ Go look at the src dir after backing up your precious file a few times:
 `-rw-rw-r-- 1 rl rl 45 Sep 15 15:21 main.20230915_1521-17.backup.rs`  
 `-rw-rw-r-- 1 rl rl   45 Sep 15 15:03 main.rs`  
 
-Your backups are naturally sorted, making your life easy.  
+Your backups are naturally sorted thanks to the ISO format of the timestamp, making your life easy.  
 See how happy your are now that life just got easy?  
 
 backup filenames are in this format: `path/filename.YYYYMMDD_HHMM-s.backup.file_extension`  
@@ -63,12 +65,13 @@ backup filenames are in this format: `path/filename.YYYYMMDD_HHMM-s.backup.file_
 
 `vim .gitignore`  
 Add the following line:  
-`*.backup`  
+`*.backup.*`  
 
 You're welcome.  We've all done it.  
 Just get into the habit of using backer before unleashing your inner wrecking ball.  
 
 #### Build Notes  
 
-2024-10-26  Added seconds an file extension to the backup filename.  
+2025-02-10  Updated .gitignore entry and a README typo.  
+2024-10-26  Added seconds to timestamp and file extension to the backup filename.  
 2023-12-09  Use `std::io::copy` instead of `fs::copy`.
